@@ -1,0 +1,116 @@
+# View pre-commit hooks at https://github.com/pre-commit/pre-commit-hooks#hooks-available
+# !!!RUN pre-commit autoupdate!!! To get the latest versions. This gist has been collecting dust bunnies and cob webs.
+# The commented repos/hooks will NOT autoupdate! If you're going to use them, uncomment and run pre-commit autoupdate.
+
+default_language_version:
+    python: python3.8
+
+default_stages: [commit, push]
+
+fail_fast: true
+
+minimum_pre_commit_version: '1.15.0'
+
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+    -   id: check-added-large-files
+    -   id: check-ast
+    -   id: check-builtin-literals
+    -   id: check-case-conflict
+    -   id: check-case-conflict
+    -   id: check-docstring-first
+    -   id: check-merge-conflict
+    -   id: check-toml
+    -   id: check-yaml
+    -   id: debug-statements
+    -   id: detect-private-key
+    -   id: end-of-file-fixer
+    -   id: fix-encoding-pragma
+    -   id: forbid-new-submodules
+    -   id: pretty-format-json
+        args:
+          - --autofix
+          - --indent=4
+          - --no-ensure-ascii
+          - --no-sort-keys
+    -   id: requirements-txt-fixer
+    -   id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]  # Preserve Markdown hard linebreaks
+          #
+    # Docformatter https://pypi.org/project/docformatter/
+-   repo: https://github.com/myint/docformatter
+    rev: v1.4
+    hooks:
+      - id: docformatter
+        args:
+          - --in-place
+          - -r
+          - --blank
+          - --recursive
+          - --wrap-summaries=72
+          - --wrap-descriptions=72
+          - --pre-summary-newline
+          - --make-summary-multi-line
+
+    # Add trailing commas https://github.com/asottile/add-trailing-comma
+-   repo: https://github.com/asottile/add-trailing-comma
+    rev: v2.0.2
+    hooks:
+    -   id: add-trailing-comma
+
+    # iSort https://pycqa.github.io/isort/
+-   repo: https://github.com/timothycrosley/isort
+    rev: 5.7.0
+    hooks:
+    -   id: isort
+        args:
+          - --trailing-comma
+          - --use-parentheses
+          - --balanced
+          - --py=38
+          - --profile=black
+          - -l=79
+
+    # Black https://black.readthedocs.io/en/stable/
+-   repo: https://github.com/psf/black
+    rev: 20.8b1
+    hooks:
+    -   id: black
+        args:
+          - --target-version=py38
+          - --line-length=79
+
+    # Flask8 https://flake8.pycqa.org/en/latest/index.html#
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 3.8.4
+    hooks:
+    -   id: flake8
+        additional_dependencies: [
+          pep8-naming,
+]
+        args:
+          - --doctests
+
+    # Unimport https://unimport.hakancelik.dev/#/
+-   repo: https://github.com/hakancelik96/unimport
+    rev: 0.7.1
+    hooks:
+    -   id: unimport
+        args:
+          - --remove
+          - --include-star-import
+          - --gitignore
+
+    # Pyupgrade https://github.com/asottile/pyupgrade
+-   repo: https://github.com/asottile/pyupgrade
+    rev: v2.7.4
+    hooks:
+    -   id: pyupgrade
+
+    # Saftey https://pyup.io/safety/
+-   repo: https://github.com/Lucas-C/pre-commit-hooks-safety
+    rev: v1.1.3
+    hooks:
+    -   id: python-safety-dependencies-check
