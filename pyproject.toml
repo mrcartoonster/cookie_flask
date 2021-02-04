@@ -7,8 +7,23 @@ authors = ["Evan Baird <mrcartoonster@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 cookiecutter = "^1.7.2"
+Flask = "^1.1.2"
+ipython = "^7.20.0"
+jedi = "0.17.2"
+Flask-WTF = "^0.14.3"
+email-validator = "^1.1.2"
+environs = "^9.3.0"
+httpx = "^0.16.1"
 
 [tool.poetry.dev-dependencies]
+pre-commit = "^2.10.0"
+pytest = "^6.2.2"
+pytest-clarity = "^0.3.0-alpha.0"
+pytest-picked = "^0.4.6"
+pytest-pythonpath = "^0.7.3"
+pytest-emoji = "^0.2.0"
+respx = "^0.16.3"
+vcrpy = "^4.1.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
