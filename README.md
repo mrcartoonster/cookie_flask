@@ -9,26 +9,33 @@ Use my [link](https://m.do.co/c/beef14f5483f) to get $100 credit over 60 days.
 You can then just push your Flask app to GitHub repo and the deploy it easily
 through [App Platform](https://cloud.digitalocean.com/apps?i=6c6e46)!
 
-Flask Extensions:
-
-1. Flask-WTF
 
 Python libraries:
 
-1. ipython
-2. jedi
-3. email-validator
-4. black
+1. [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+2. [ipython](https://ipython.readthedocs.io/en/stable/)
+3. [jedi](https://jedi.readthedocs.io/en/latest/)
+4. [email-validator](https://github.com/JoshData/python-email-validator)
+5. [environs](https://github.com/sloria/environs)
+5. [httpx](https://www.python-httpx.org/)
+
+Flask Extensions:
+
+1. [Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/)
 
 
 Python development dependencies:
 
-1. pytest
-2. pytest-clarity
-3. pytest-emoji
-4. pytest-picked
-5. pytest-pythonpath
-4. prettyprinter
+1. [pytest](https://docs.pytest.org/en/latest/)
+2. [pre-commit](https://pre-commit.com/)
+3. [pytest-clarity](https://github.com/darrenburns/pytest-clarity)
+4. [pytest-emoji](https://github.com/hackebrot/pytest-emoji)
+5. [pytest-picked](https://github.com/anapaulagomes/pytest-picked)
+6. [pytest-pythonpath](https://github.com/bigsassy/pytest-pythonpath)
+7. [prettyprinter](https://prettyprinter.readthedocs.io/en/latest/)
+8. [respx](https://lundberg.github.io/respx/)
+9. [VCR.py](https://vcrpy.readthedocs.io/en/latest/index.html)
+
 
 
 # Quick Start
